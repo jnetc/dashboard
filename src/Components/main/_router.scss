@@ -1,0 +1,55 @@
+    // Transition for *React-Transition-Group v2
+  // CHANGE ROUTE TO ANIMATE
+.fade-route-enter {
+  z-index: 1;
+  opacity: 0;
+  transform: scale(0.9) translateY(-50px);
+}
+.fade-route-enter-active {
+  opacity: 1;
+  transform: scale(1) translateY(0px);
+  transition: all 0.3s ease-in-out;
+}
+.fade-route-exit {
+  z-index: 10;
+  opacity: 0;
+  transform: scale(1);;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.fade-route-exit-active {
+  opacity: 0;
+  transform: scale(0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+  // PRESS ITEM TO ANIMATE
+.fade-route-enter.item-motion {
+  z-index: 1;
+  opacity: 0;
+  transform: translateX(-25px);
+}
+.fade-route-enter-active.item-motion {
+  opacity: 1;
+  transform: translateX(0px);;
+  transition: all 0.3s ease-in;
+}
+.fade-route-enter-done.item-motion {
+  opacity: 1;
+  transform: translateX(0px);
+  // transition: all 0.3s ease-in;
+}
+.fade-route-exit.item-motion {
+  z-index: 10;
+  opacity: 0;
+  transform: translateX(0px);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.fade-route-exit-active {
+  opacity: 0;
+  transform: translateX(-15px);
+  transition: all 0.3s ease-out;
+}

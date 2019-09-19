@@ -1,0 +1,71 @@
+.app {
+  a {
+    color: $text;
+  }
+  // background: $primary;
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left:0px;
+    // background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(0,212,255,0) 36%);
+    // background: linear-gradient(-120deg, rgba(lighten($primary, 2), 1) 0%, rgba($primary, 0) 60%);
+    z-index: -1;
+  }
+}
+.wrapper {
+  width: calc(100% - 260px);
+  margin-left: auto;
+  position: relative;
+}
+
+ // Import Navigation styles
+@import './navigation/sass/menu-button';
+@import './navigation/sass/menu-sub-button';
+@import './navigation/sass/navigation';
+
+  // Import Header styles
+@import './header/sass/header-login';
+@import './header/sass/header-notify';
+@import './header/sass/header';
+@import './header/sass/notify-btn';
+@import './header/sass/options';
+@import './header/sass/messages';
+
+  // Import Main styles
+@import './main/main';
+@import './main/router';
+
+  // Import Dashpoard style
+@import './main/dashboard/dashboard';
+@import './main/dashboard/sensors/sass/sensor';
+@import './main/dashboard/sensors/sass/sensors-list';
+@import './main/dashboard/sensors/sass/sensor-data';
+@import './main/dashboard/sensors/sass/sensor-data-header';
+@import './main/dashboard/sensors/sass/sensor-data-fieldsets';
+@import './main/dashboard/sensors/sass/charts';
+
+  // Import Sites style
+@import './main/sites/sass/site';
+@import './main/sites/sass/sitemap';
+@import './main/sites/sass/map';
+@import './main/sites/sass/sitemap-action-panel';
+@import './main/sites/sass/sitemap-tooltip';
+@import './main/sites/sass/sitemap-pointers';
+@import './main/sites/sass/sitemap-route';
+@import './main/sites//google-map/google-map';
+
+  // Import Components
+@import './button';
+@import './_preloader/preloader';
+@import './_search/search';
+@import './_progress-steps/progress-steps';
+@import './_range-slider/range-slider';
+
+
+
+
+
+

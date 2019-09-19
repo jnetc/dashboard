@@ -1,0 +1,72 @@
+$body-dark-theme: #222635;
+$body-light-theme: #ecd9d8;
+$body-exitlight-theme:#eefaeb;
+$body-cramo-theme:#ffe1db;
+
+// Reset styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1;
+}
+  // Remove list style
+ul {
+  list-style: none;
+}
+// Remove link style
+a {
+  text-decoration: none;
+}
+
+legend {
+  user-select: none;
+}
+button {
+  border-style: none;
+  outline-style: none;
+}
+:focus,
+:active {
+  outline: none;
+}
+
+// Body
+html, body, #root, .app {
+  width: 100%;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+input,
+button {
+  font-family: 'Roboto', sans-serif;
+}
+
+  // COLOR THEME'S
+
+.dark_theme {
+  background: $body-dark-theme;
+  @import './Components/colors/colors_dark_theme';
+  @import './Components/base';
+  @import './Components/app';
+}
+.light_theme {
+  background: $body-light-theme;
+  @import './Components/colors/colors_light_theme';
+  @import './Components/base';
+  @import './Components/app';
+}
+.exitlight_theme,
+.emexlight_theme {
+  background: $body-exitlight-theme;
+  @import './Components/colors/colors_exitlight_theme';
+  @import './Components/base';
+  @import './Components/app';
+}
+.cramo_theme {
+  background: $body-cramo-theme;
+  @import './Components/colors/colors_cramo_theme';
+  @import './Components/base';
+  @import './Components/app';
+}

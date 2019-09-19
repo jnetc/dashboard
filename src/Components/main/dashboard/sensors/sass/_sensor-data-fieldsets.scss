@@ -1,0 +1,48 @@
+.sensor__area__params {
+  max-width: 300px;
+  position: fixed;
+  right: 20px;
+  fieldset {
+    width: 100%;
+    min-height: 50px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid $secondary;
+    border-radius: 10px;
+    legend {
+      color: rgba($text, .8);
+      font-size: .7em;
+    }
+  }
+}
+.sensor__areas {
+  display: flex;
+  justify-content: space-around;
+  padding: 5px 5px 10px;
+  flex-wrap: wrap;
+}
+
+.sensor__areas_indicator {
+  min-height: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#have_new_version {
+  width: 100%;
+  flex-grow: 1;
+  text-align: center;
+  padding-bottom: 15px;
+  color: $pale-green;
+}
+#sensor__firmware__version {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-shrink: 1;
+  .version {
+    font-size: 1.5em;
+  }
+}

@@ -1,0 +1,66 @@
+  // COLORS
+$primary: #eefaeb;
+$secondary: #9b9999;
+$light-coral: #18ba60;
+$medium-purple: #7365dc;
+$pale-green: #7dff79;
+$green-yellow: #CEFF79;
+$lemon-chiffon: #FFFB79;
+$aqua: #07DACF;
+$state-blue: #7394F0;
+$text: #292929;
+$disable: #656972;
+$shadow: #646464;
+
+  // INDICATOR COLOR
+$indicator-pale-green: #11c00b;
+$indicator-green-yellow: #CEFF79;
+$indicator-lemon-chiffon: #FFFB79;
+$indicator-light-coral: #f81010;
+$indicator-state-blue: #7394F0;
+$indicator-disable:#646464;
+
+
+  // STATUS COLOR
+$status-update: #11c00b;
+$status-good: #11c00b;
+$status-alert: #f81010;
+$status-warning: #e9e105;
+$status-cold: #7394F0;
+$status-disable: rgb(158, 153, 161);
+//-------
+// POINTERS ON THE MAP
+$wear-pointer: #80c87f; // people
+$infrastructure-pointer: #80c87f; // infrastructure
+$vehicle-pointer: #E08DAC; // vehicle // danger
+$exitlight-pointer: #38fe25; // exit light
+$tool-pointer: #f6b042; // tools // warning
+$machine-pointer: #f6b042; // machine // warning
+
+
+
+  // NAV COLORS
+$nav-bg: #18ba60;
+$nav-icons: #222835;
+$nav-btn-txt: #ffffff;
+
+  // PROGRESS STEPS
+$steps: #18ba60;
+
+  // TOOLTIP
+$ttip-main:#eff7f0;
+$ttip-border:#18ba60;
+$ttip-icons: #18ba60;
+$ttip-shadow: #000;
+$ttip-as-stat: #f8eded;
+
+  // ACTION PANEL
+$action-btn: #35c273;
+$action-btn-txt: #f0f0f0;
+$cancel-btn: #353535;
+$indoor-btn: #227948;
+
+  // GOOGLE MAP
+$pointer-bg: #f6b042;
+$pointer-as: #000;
+$ttip-gmap: #eff7f0;

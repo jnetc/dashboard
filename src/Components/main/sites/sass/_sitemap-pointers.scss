@@ -1,0 +1,84 @@
+// .map-poi {
+//   cursor: pointer;
+// }
+// .map-pointers-stroke-option {
+//   stroke: $status-alert;
+//   stroke-width: 0px;
+//   stroke-opacity: 1;
+//   animation: alert 2s linear infinite;
+// }
+
+  // BEACONS ON THE MAP
+// .infra-poi {
+//   width: 20px;
+//   height: 20px;
+// }
+// .infra-poi-alert {
+//   @extend .infra-poi;
+//   @extend .map-pointers-stroke-option;
+// }
+
+
+
+
+.stroke-option {
+  stroke: $status-alert;
+  stroke-width: 0px;
+  // stroke-dasharray: 166;
+  // stroke-dashoffset: 0;
+  stroke-opacity: 1;
+  
+}
+.none-selecteble {
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+.pointer-bg-map {
+  cursor: pointer;
+}
+.pointer-br-map {
+  fill: transparent;
+  stroke: black;
+  stroke-width: 2px;
+  @extend .none-selecteble;
+}
+.vehicle-movement {
+  fill: transparent;
+  stroke: $status-alert;
+  stroke-width: 2px;
+  stroke-dasharray: 166;
+  stroke-dashoffset: 0;
+  animation: move 2s linear infinite;
+  @extend .none-selecteble;
+}
+
+  // SENSORS ON THE MAP
+.map_point-alert {
+  // fill: $bg-pointer;
+  stroke: $status-alert;
+  @extend .stroke-option;
+  animation: alert 2s linear infinite;
+}
+
+.danger_radius {
+  fill: red;
+  @extend .none-selecteble;
+}
+
+  // ALERT ANIMATION
+@keyframes alert {
+  50% { stroke-opacity: 0; stroke-width: 20px; }
+  100% { stroke-opacity: 0; stroke-width: 10px }
+}
+@keyframes move {
+  100% { stroke-dashoffset: 331 }
+}
+
+.watch_dot_pointer {
+  transform-origin: 50% 50%;
+}
+.watch_dot {
+  @extend .watch_dot_pointer;
+  transform: translateX(15px) rotateZ(15deg);
+}

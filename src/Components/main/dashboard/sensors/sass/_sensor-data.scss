@@ -1,0 +1,34 @@
+#sensor__area {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#sensor__area__data {
+  display: flex;
+}
+.sensor__area__graph {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 320px;
+  padding: 10px 10px 0 0;
+}
+.sensor__graph__item {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  // padding: 10px;
+  color: #b9bdd1;
+  margin: 60px 10px 0px 10px;
+  // flex-grow: 1;
+  // border-radius: 10px;
+  // background: $secondary;
+  >div {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+  }
+}
+
+  

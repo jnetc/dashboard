@@ -1,0 +1,29 @@
+#sensor__area__header {
+  display: flex;
+  align-items: center;
+  margin: 10px 20px;
+  span,
+  input {
+    font-size: 1.3rem;
+  }
+  span#area__header__id {
+    color: $disable;
+    font-size: .8rem;
+  }
+  form#area__header__name {
+    display: flex;
+    align-items: center;
+    // margin-left: 20px;
+    span#area__header__namesensor {
+      padding: 0 5px 0 20px;
+    }
+    button {
+      margin-left: 15px;
+    }
+  }
+  form#area__header__name {
+    margin-right: auto;
+    color: rgba($text, .8);
+
+  }
+}

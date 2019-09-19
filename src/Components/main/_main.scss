@@ -1,0 +1,267 @@
+  // MIAN 100%!!! NO PADDING, NO MARGIN
+  // or have some trouble with "fixed" position
+  // position: relative - for absolute position in router.scss
+main {
+  width: 100%;
+  display: none;
+  position: relative;
+  color: $text;
+  // overflow: hidden;
+  perspective: 200px;
+  transform: translateY(90%);
+}
+
+  // CSSTransition class for preload
+.loaded-enter {
+  display: block;
+  opacity: 0;
+}
+.loaded-enter-active { 
+  opacity: 1;
+  transform: translateY(0px);
+  transition: all .4s cubic-bezier(0.12, 0.76, 0.57, 1.07);
+}
+
+.loaded-enter-done {
+  opacity: 1;
+  display: block;
+  transform: translateY(0px);
+}
+
+
+  // ZONES OPTIONS
+#sensors__filter {
+  margin-top: 25px;
+  margin-left: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page {
+  padding: 0 20px;
+}
+.preload_zone {
+  height: 100%;
+  position: relative;
+}
+
+#alert__zone {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 25px;
+  padding: 8px 8px 15px 8px;
+  position: relative;
+  overflow: hidden;
+  border: 0px solid;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba($shadow, .15);
+  legend {
+    margin-left: 5px;
+    padding: 7px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 5px 10px rgba($shadow, .2);
+  }
+}
+#alert__zone {
+  box-shadow: 0px 0px 0px 2px fade-out($status-alert, .8),
+              0 10px 10px rgba($shadow, .15);
+  legend {
+    background: $primary;
+    color: $status-alert;
+  }
+}
+
+#fine__zone {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  margin-top: 15px;
+}
+  // LIST OF SENSORS, SITES
+.db__item__block {
+  display: flex;
+}
+
+  // ITEM
+.db__item__sensor,
+.db__item__site {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 2px 0;
+  padding: 0.9em;
+  position: relative;
+  border-radius: 10px;
+  background: darken($primary, 3);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  // Icon arrow *for separate from another arrows
+  .icon-arrow {
+    padding: 3px 0;
+    color: rgba($text, .2);
+    margin-left: 10px; 
+    font-size: 1.5em;
+    transform: rotate(-90deg);
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.db__item__block:hover {
+  .db__item__sensor,
+  .db__item__site {
+    background: $primary;
+    box-shadow: 0 6px 10px rgba($shadow, 0.5);
+    .icon-arrow {
+      color: rgba($text, .5);
+      transform: translateX(5px) rotate(-90deg);
+    }
+  }
+}
+
+  // LINE
+.main_in_line {
+  flex-grow: 1;
+  font-size: 1em;
+  // overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  .cut_name {
+    max-width: 15em;
+  }
+}
+.other_in_line {
+  flex-shrink: 1;
+}
+
+  // Width line components
+.wl-xs {
+  width: 3em;
+}
+.wl-s {
+  width: 5em;
+}
+.wl-m {
+  width: 7em;
+}
+.wl-l {
+  width: 9em;
+}
+.wl-xl {
+  width: 11em;
+}
+
+  // Font size, color & pos
+.fcline {
+  padding-top: 5px;
+  color: rgba($text, .7);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; 
+}
+.ex-fcline {
+  font-size: 1.5em;
+}
+.ailine {
+  align-items: center;
+}
+  // SENSOR INDICATOR COLORS CLASS
+.names-c {
+  color: rgba($text, 1);
+}
+.alert-bg, .hot-bg, .bad-bg {
+  background: $indicator-light-coral;
+}
+.good-bg {
+  background: $indicator-pale-green;
+}
+.warn-bg {
+  background: $indicator-lemon-chiffon;
+}
+.cold-bg {
+  background: $indicator-state-blue;
+}
+.disable-bg {
+  background: $indicator-disable;
+}
+
+  // STATUS COLOR CLASS
+.status-alert-c {
+  color: $status-alert;
+}
+.status-good-c {
+  color: $status-good;
+}
+.status-disable-c {
+  color: $status-disable;
+}
+.status-cold-c {
+  color: $indicator-state-blue;
+}
+.status-alert-bg {
+  background: $status-alert;
+}
+.status-good-bg {
+  background: $status-good;
+}
+.status-disable-bg {
+  background: $status-disable;
+}
+.status-alert-br {
+  border-color: $status-alert;
+}
+.status-good-br {
+  border-color: $status-good;
+}
+.status-disable-br {
+  border-color: $status-disable;
+}
+  // SITEMAP POINTER STATUS COLOR
+.status-alert-fill {
+  fill: $status-alert;
+}
+.status-disable-fill {
+  fill: $status-disable;
+}
+// pointer fill colors
+.exitlight-pointer-fill {
+  fill: $exitlight-pointer;
+}
+.infrastructure-pointer-fill {
+  fill: $infrastructure-pointer;
+}
+.machine-pointer-fill {
+  fill: $machine-pointer;
+}
+.tools-pointer-fill {
+  fill: $tool-pointer;
+}
+.vehicle-pointer-fill {
+  fill: $vehicle-pointer;
+}
+.wear-pointer-fill {
+  fill: $wear-pointer;
+}
+
+
+  // Title rows component
+.row__title {
+  margin-top: 0px;
+  @extend .names-c;
+  font-size: .7em;
+  user-select: none;
+    // Extra space for title
+  .ext__title {
+    margin-left: 5px;
+  }
+}
+
+ // IN LINE POSITION
+.col-pos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

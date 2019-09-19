@@ -1,0 +1,97 @@
+.button__box {
+  // empty
+}
+.button__main {
+  max-height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  transition-delay: 0.1s;
+  transition: all ease-in-out 0.2s;
+  cursor: pointer;
+  z-index: 5;
+    // Action when hover on button
+  &:hover {
+    animation: shake 0.3s ease-in-out forwards;
+    box-shadow: 0 6px 6px rgba($shadow, .15);
+  }
+  // Arrow style *for separate
+  i.icon-arrow {
+  margin-left: auto;
+  padding-left: 5px;
+  color: $primary;
+  font-size: 0.8rem;
+  transition: all 0.3s ease-in-out;
+  }
+}
+.button__main span {
+  flex-grow: 1;
+}
+  // Icon style
+i.icon__main {
+  padding-right: 5px;
+  color: $nav-icons;
+  font-size: 1.4rem;
+  transition: all 0.3s ease-in-out;
+}
+.nav_bt_nm {
+  color: $nav-btn-txt;
+}
+
+  // Subbutton background
+.sub__menu {
+  width: 180px;
+  max-height: 0px;
+  margin-left: auto;
+  padding: 0;
+  position: relative;
+  top: -15px;
+  overflow: hidden;
+  opacity: 0;
+  font-size: 15px;
+  border-radius: 10px;
+  background: $primary;
+  box-shadow: 0 6px 6px rgba($primary, 0.3);
+  transition: all ease-in-out 0.2s;
+  transform: translateY(-25px);
+  z-index: 1;
+  pointer-events: none;
+}
+  // Main botton ckecked action
+.button__box.selected > .button__main {
+  background: $primary;
+  box-shadow: 0 6px 6px rgba($shadow, 0.15);
+  i.icon__main {
+    color: $light-coral;
+  }
+  i.icon-arrow {
+    opacity: 0;
+    margin-right: -22px;
+    transform: translateX(22px);
+  }
+  .nav_bt_nm {
+    color: $text;
+  }
+}
+  // Main botton ckecked & submenu action
+.button__box.selected + .sub__menu {
+  max-height: 300px;
+  padding: 20px 10px 15px;
+  opacity: 1;
+  transition-delay: 0.2s;
+  transform: translateY(0px);
+  pointer-events: initial;
+}
+  // Shake animation for main button
+@keyframes shake {
+  0% {transform: translateX(-5px)}
+  25% {transform: translateX(3px)}
+  50% {transform: translateX(-2px)}
+  75% {transform: translateX(1px)}
+  100% {transform: translateX(0px)}
+}

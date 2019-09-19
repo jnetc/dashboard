@@ -1,0 +1,11 @@
+header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 0 10px;
+  color: $text;
+  user-select: none;
+  z-index: 1000;
+}

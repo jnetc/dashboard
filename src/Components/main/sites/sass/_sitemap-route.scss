@@ -1,0 +1,55 @@
+.draw-lineroute {
+  stroke: #e06c0f;
+  // stroke: orange;
+  stroke-width: 5px;
+  stroke-linecap: round;
+}
+.draw-turnroute {
+  stroke: $primary;
+  stroke-width: 5px;
+}
+.draw-turnroute {
+  stroke: $primary;
+  stroke-width: 5px;
+  fill: orangered;
+}
+
+#start-position-point {
+  stroke: rgb(1, 179, 81);
+  // stroke: rgb(78, 122, 243);
+  stroke-width: 3px;
+  stroke-dasharray: 100px;
+  fill: $primary;
+  animation: end-pos 3s ease-in-out infinite;
+}
+#start-position-arrow {
+  fill: rgb(1, 179, 81);
+  // fill: rgb(78, 122, 243);
+}
+#end-position-icon {
+  fill: orangered;
+  // fill: rgb(1, 179, 81);
+}
+#end-position-point {
+  // @extend .draw-turnroute;
+  stroke: $primary;
+  stroke-width: 7px;
+  fill: red;
+  // fill: rgb(1, 95, 43);
+  // stroke: $primary;
+}
+#end-position-bg {
+  // stroke: $primary;
+    // width: 20px;
+  // stroke-width: 4px;
+    // height: 20px;
+  fill: $primary;
+  // stroke: orange;
+  // stroke-dasharray: 100px;
+  // animation: end-pos 1s ease-in-out infinite;
+}
+@keyframes end-pos {
+  0% { stroke-dashoffset: 100px; }
+  50% { stroke-dashoffset: 300px; }
+  100% { stroke-dashoffset: 300px; }
+}

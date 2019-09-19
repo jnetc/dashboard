@@ -1,0 +1,51 @@
+nav {
+  width: 265px;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+  color: $text;
+  user-select: none;
+  z-index: 10000;
+  figure {
+    width: 220px;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    a {
+      max-width: 150px;
+      max-height: 110px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  a {
+    color: $text;
+  }
+
+  // Logo
+  img {
+    width: 150px;
+    max-height: 110px;
+    z-index: 2;
+  }
+
+    // Main buttons
+  .menu__box {
+    width: 220px;
+    position: absolute;
+    top: 160px;
+    left: 5px;
+    z-index: 3;
+  }
+  
+    // Navigation background
+  #nav-background {
+    height: 100vh;
+  }
+  .wizense_bg {
+    fill: $nav-bg;
+  }
+}

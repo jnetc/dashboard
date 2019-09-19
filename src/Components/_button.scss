@@ -1,0 +1,187 @@
+  //  MAIN BUTTON
+.button__style {
+  // max-width: 150px;
+  position: relative;
+}
+
+.btn {
+  // max-width: 150px; 
+  padding: 10px 20px;
+  position: relative;
+  // overflow: hidden;
+  color: rgba($text, .8);
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 5px;
+  background: lighten($primary, 3);
+  // border: 4px solid transparent;
+  // background: linear-gradient(to top, $primary 0%, $primary 49.9%, $secondary 50%);
+  box-shadow: 0 4px 8px rgba($shadow, .3);
+  transition: all 0.3s ease-in-out;
+
+  cursor: pointer;
+  &:hover {
+    background: lighten($primary, 3);
+    &::after {
+      // transform: skew(0deg, 0deg);
+    }
+    &::before {
+      // transform: skew(0deg, 0deg);
+    }
+  }
+  &::after {
+    content: '';
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    // transform: skew(2deg, 2deg);
+    z-index: -5;
+  }
+  &::before {
+    content: '';
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    // transform: skew(2deg, 2deg);
+    z-index: -5;
+  }
+  &-primary,
+  &-green,
+  &-yellow-green,
+  &-yellow,
+  &-aqua,
+  &-blue,
+  &-purple,
+  &-coral,
+  &-update {
+    &:hover {
+      &::after {
+        opacity: 0;
+        transform: translateY(-3px);
+      }
+      &::before {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
+    &::after {
+      opacity: 1;
+    }
+    &::before {
+      opacity: 0;
+      transform: translateY(-3px);
+    }
+  }
+  // PRIMARY BUTTON
+
+  &-primary {
+    &::after {
+      background: linear-gradient(to right, $light-coral, $medium-purple);
+    }
+    &::before {
+      background: linear-gradient(to right, $primary, $light-coral);
+    }
+  }
+    // GREEN BUTTON
+  &-green {
+    &::after {
+      background: linear-gradient(to right, $pale-green,  darken($pale-green, 60));
+    }
+    &::before {
+      background: linear-gradient(to right, $primary, $pale-green);
+    }
+  }
+    // YELLOW-GREEN BUTTON
+  &-yellow-green {
+    &::after {
+      background: linear-gradient(to right, $green-yellow,  darken($green-yellow, 60));
+    }
+    &::before {
+      background: linear-gradient(to right, $primary, $green-yellow);
+    }
+  }
+    // YELLOW BUTTON
+  &-yellow {
+    &::after {
+      background: linear-gradient(to right, $lemon-chiffon,  darken($lemon-chiffon, 60));
+    }
+    &::before {
+      background: linear-gradient(to right, $primary, $lemon-chiffon);
+    }
+  }
+    // AQUA BUTTON
+  &-aqua {
+    &::after {
+      background: linear-gradient(to right, $aqua,  darken($aqua, 30));
+    }
+    &::before {
+      background: linear-gradient(to right, $primary, $aqua);
+    }
+  }
+    // BLUE BUTTON
+  &-blue {
+    &::after {
+      background: linear-gradient(to right, $state-blue,  darken($state-blue, 40));
+    }
+    &::before {
+      background: linear-gradient(to right, $primary, $state-blue);
+    }
+  }
+    // PURPLE BUTTON
+  &-purple {
+    &::after {
+      background: linear-gradient(to right, $medium-purple,  darken($medium-purple, 30));
+    }
+    &::before {
+      background: linear-gradient(to right, $primary, $medium-purple);
+    }
+  }
+    // CORAL BUTTON
+  &-coral {
+    &::after {
+      background: linear-gradient(to right, $light-coral,  darken($light-coral, 60));
+    }
+    &::before {
+      background: linear-gradient(to right, $primary, $light-coral);
+    }
+  }
+    // UPDATE BUTTON STYLE + ANIMATION
+  &-update {
+    &::after {
+      top: -1px;
+      animation: active-update 1s linear infinite;
+      background: linear-gradient(to right, darken($pale-green, 40), $pale-green);
+    }
+    &:hover {
+      &::after {
+        opacity: 1;
+
+      }
+    }
+  }
+    // DISABLE BUTTON
+  &-disable {
+    color: $disable;
+    cursor: default;
+    &::after {
+      background: linear-gradient(to right, $disable,  darken( $disable, 20));
+    }
+    &:hover {
+      background: $primary;
+    }
+  }
+}
+  // ANIMATION FOR UPDATE BUTTON
+@keyframes active-update {
+  0% { transform: skew(3deg, 3deg); }
+  50% { transform: skew(-3deg, -3deg); }
+  100% { transform: skew(3deg, 3deg); }
+}

@@ -1,0 +1,90 @@
+  // SENSOR AIRQUALITY
+.airQuality__indicator {
+  min-height: 27px;
+  position: relative;
+  .icon-co2 {
+    position: absolute;
+    top: -1px;
+    font-size: 2.3em;
+    text-shadow: 0 5px 5px rgba($shadow, .3);
+  }
+}
+
+  // SENSOR HEADING
+.heading__indicator {
+  min-height: 27px;
+  position: relative;
+  .icon-compas-arrow {
+    position: absolute;
+    top: 7px;
+    left: 5px;
+    font-size: 1.3em;
+    color:  rgba($text, .7);
+    text-shadow: 0 5px 5px rgba($shadow, .3);
+  }
+}
+
+  // SENSOR BATTERY STATUS
+.icon-battery {
+  position: absolute;
+  top: -4px;
+  left: -10px;
+  font-size: 24px;
+  color: fade-out($text, .65);
+  text-shadow: 0 5px 5px rgba($shadow, .3);
+}
+.battery__indicator {
+  width: 35px;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  margin-left: 6px;
+  margin-bottom: 4px;
+}
+.battery__line {
+  width: 4px;
+  height: 15px;
+  display: block;
+  border-radius: 2px;
+  background: $secondary;
+  &.high {
+    background: $indicator-pale-green;
+  }
+  &.good {
+    background: $indicator-green-yellow;
+  }
+  &.mid {
+    background: $indicator-lemon-chiffon;    
+  }
+  &.low {
+    background: $indicator-light-coral;
+  }
+}
+
+  // SENSOR SIGNAL
+.signal__indicator {
+  width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 10px;
+}
+.signal__line {
+  width: 5px;
+  height: 20px;
+  display: block;
+  border-radius: 2px;
+  background: $secondary;
+  &.high {
+    background: $indicator-pale-green;
+  }
+  &.good {
+    background: $indicator-green-yellow;
+  }
+  &.mid {
+    background: $indicator-lemon-chiffon;    
+  }
+  &.low {
+    background: $indicator-light-coral;
+  }
+}

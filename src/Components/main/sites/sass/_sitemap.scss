@@ -1,0 +1,19 @@
+.sites__map_container {
+  position: relative;
+  // overflow: hidden; //  
+  // Выбор приоритета обрезка по краям tooltip       
+  // или появление снизу перед тем как показать на карте?
+  // Ещё вариант перенести выше к корню App и данные передавать через Redux
+
+}
+  // MAP
+.sites__map_area {
+  position: relative;
+}
+#map_switcher {
+  max-width: 250px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 0px;
+  margin-left: auto;
+}

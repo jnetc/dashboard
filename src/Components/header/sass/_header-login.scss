@@ -1,0 +1,43 @@
+.header__login__body {
+  display: flex;
+  margin-right: 25px;
+  position: relative;
+  background: linear-gradient(to right, $light-coral, $medium-purple);
+  border-radius: 20px;
+  box-shadow: 0 6px 6px rgba($shadow, .16);
+  transition: all 0.2s cubic-bezier(0.1, 0.77, 0.58, 1);
+  &::before {
+    content: '';
+    width: 104%;
+    height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: inherit;
+    background: linear-gradient(to bottom, $secondary, $primary);
+    transform: translate(-47%, -50%);
+    box-shadow: 0 6px 6px rgba($shadow, .35);
+    transition: all 0.2s cubic-bezier(0.1, 0.77, 0.58, 1);
+  }
+}
+.header__login__name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 60px 10px 30px;
+  user-select: none;
+  z-index: 5;
+}
+.header__login__avatar {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: -15px;
+  right: -10px;
+  border-radius: 50%;
+  border: 5px solid $secondary;
+  object-fit: cover;
+  background: no-repeat center;
+  cursor: pointer;
+  z-index: 5;
+}

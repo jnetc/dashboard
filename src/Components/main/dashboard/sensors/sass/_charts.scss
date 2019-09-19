@@ -1,0 +1,70 @@
+
+.graph__style__box {
+  width: 50%;
+  // height: 400px;
+  position: relative;
+}
+
+// APEXCARTS RESPONSIVE BODY
+[id*="apexcharts"].apexcharts-canvas[class*="apexcharts"].light {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  // CHANGE POSITION GRAPH
+.apexcharts-inner.apexcharts-graphical {
+  // width: 100% !important;
+  // transform: translate(110px, 30px);
+}
+  // CHANGE NUMBERS & LABEL POSITION BY Y-AXIS
+.apexcharts-yaxis {
+  transform: translate(95px, 0px);
+}
+  // WIDTH GRAPH
+[id*="SvgjsSvg"].apexcharts-svg {
+  width: 100%;
+}
+
+  // MARKER MODIFY STYLE
+[id*="SvgjsCircle"].apexcharts-marker.no-pointer-events {
+  // fill: #7467dc;  
+}
+
+  // APEXCHARTS TOOLTIP 
+.apexcharts-tooltip.active {
+  background: lighten($secondary, 15);
+  color: rgba($text, 0.8);
+  // border: 1px solid rgba($text, 0.5);
+  box-shadow: 0 3px 5px rgba($shadow, .2);
+}
+div.apexcharts-tooltip-title {
+  background: lighten($secondary, 5);
+  font-size: 14px !important;
+  font-family: 'Roboto', sans-serif !important;
+}
+.apexcharts-tooltip-text {
+  font-size: 14px !important;
+  font-family: 'Roboto', sans-serif !important;
+}
+span.apexcharts-tooltip-marker {
+  background: rgb(253, 121, 122) !important;
+}
+.apexcharts-xaxistooltip.active {
+  background: $secondary;
+  color: rgba($text, 0.8);
+  border: 1px solid rgba($text, 0.5);
+  box-shadow: 0 3px 5px rgba($shadow, .2);
+}
+
+  // HIDE, NO NEEDED for render
+.apexcharts-legend,
+#SvgjsRect1008,
+#SvgjsG1080,
+#SvgjsG1081,
+#SvgjsG1082,
+#SvgjsRect1767 {
+  display: none;
+}
